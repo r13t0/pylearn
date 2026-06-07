@@ -1,3 +1,49 @@
+GIT
+
+Neovim = write/edit code
+Terminal = save/version/sync code (Git)
+
+🧠 1️⃣ Where do I  type Git commands?
+Always in Termux/terminal, like this:
+
+~/pylearn $
+
+
+🟢 First time on a device:
+
+Download the entire project from GitHub onto this computer
+git clone https://github.com/r13t0/pylearn.git
+✔ It copies your code to the desktop
+✔ It also includes Git history
+✔ It becomes a linked repo (not just files)
+
+
+🔵 Every time after that:
+
+git pull
+Only when:
+You already cloned the repo
+AND later you made changes somewhere else (Android)
+write code on android/desktop → commit → push
+run: git pull → get updated code
+
+ANDROID
+🔴 When you change code:
+
+git add .
+git commit -m "update"
+git push 
+
+
+
+What this means: 👉 “upload to cloud”
+✔ Save changes locally (commit)
+✔ Upload to GitHub (push)
+✔ Now other devices can see it
+
+
+
+-------------------------------------------------------------------
 
 Create folder           :mkdir folder_name
 open file inside folder :nvim folder name/file name.py
