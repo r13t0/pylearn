@@ -21,11 +21,7 @@ finally:
 
 💡 Best Practices
 
-Catch specific exceptions: Avoid using a bare except: block. Explicitly catch named errors like ValueError or TypeError to ensure you do not accidentally suppress unrelated, critical bugs.
-
+Catch specific exceptions: Avoid using a bare except: block. Explicitly catch named errors le ValueError or TypeError to ensure you do not accidentally suppress unrelated, critical bugs
 Inspect the error: Use the as keyword to store the error message inside a variable for logging purposes.
-
-except Exception as e:
-    print(f"An unexpected error occurred: {e}")
 
 

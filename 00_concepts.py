@@ -62,6 +62,7 @@ Search concept          :/
 nxt result              :n
 previous result         :N
 view files              :ls
+mv file                 :mv script.py path/to/folder/
 
 access init.lua - Terminal  ls -a ~/.config/nvim/
 
@@ -343,3 +344,22 @@ For i in range(4):
  # LOOPS - FOR 
  # ======================
 
+
+
+
+
+
+
+#=====================================
+# STRINGS 
+#====================================
+
+
+- Concept: String Extraction Pattern
+
+When data is embedded inside text:
+
+1. Find a reliable marker.
+2. Slice relative to that marker.
+3. Clean the extracted text if necessary.
+4. Convert it to the required data type.
