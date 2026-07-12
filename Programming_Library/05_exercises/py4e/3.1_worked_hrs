@@ -1,0 +1,466 @@
+Great. This exercise is an important jump because you are adding **decision-making** to the previous pipeline.
+
+Before:
+
+```text
+Input
+ ↓
+Transform
+ ↓
+Process
+ ↓
+Output
+```
+
+Now:
+
+```text
+Input
+ ↓
+Transform
+ ↓
+Decision
+ ↓
+Process
+ ↓
+Output
+```
+
+The new idea is not overtime calculation itself. The reusable idea is **Selection**: choosing different actions based on a condition.
+
+---
+
+# Step 1 — Problem Analysis (Decomposition)
+
+## Purpose
+
+Calculate gross pay while applying overtime rules.
+
+## Inputs
+
+* Hours worked
+* Rate per hour
+
+Example:
+
+```
+Hours = 45
+Rate = 10.50
+```
+
+## Outputs
+
+Gross pay:
+
+```
+498.75
+```
+
+## Constraints
+
+* First 40 hours are paid normally.
+* Hours above 40 are paid at 1.5× rate.
+* User input is assumed valid.
+
+## Sub-Problems
+
+1. Get hours.
+2. Get hourly rate.
+3. Convert input strings to numbers.
+4. Check if overtime exists.
+5. Calculate regular pay.
+6. Calculate overtime pay if needed.
+7. Display total pay.
+
+---
+
+# Step 2 — Pattern Recognition
+
+| Sub-problem        | Pattern   | Why?                     |
+| ------------------ | --------- | ------------------------ |
+| Get hours/rate     | Input     | Receive data             |
+| Convert strings    | Transform | Change data type         |
+| Check hours > 40   | Selection | Choose between two paths |
+| Calculate overtime | Sequence  | Perform steps in order   |
+| Display result     | Output    | Show answer              |
+
+---
+
+## New Pattern Introduced
+
+## Selection
+
+Recognition clue:
+
+> "If this condition is true, do one thing; otherwise do another."
+
+Examples:
+
+* If age is 18 or older → allow entry.
+* If password is correct → login.
+* If hours exceed 40 → calculate overtime.
+
+---
+
+# Step 3 — Pattern Composition
+
+Your pipeline:
+
+```text
+Input
+ ↓
+Transform
+ ↓
+Selection
+ ↓
+Calculation
+ ↓
+Output
+```
+
+Inside the Selection:
+
+```text
+Hours > 40?
+
+       Yes
+        ↓
+Regular Pay + Overtime Pay
+
+       No
+        ↓
+Regular Pay
+```
+
+The controlling pattern is:
+
+**Selection**
+
+because it decides which calculation happens.
+
+---
+
+# Step 4 — Abstraction
+
+Ignore Python.
+
+The program:
+
+> Receives information, checks whether a special condition exists, chooses the correct calculation method, and returns the result.
+
+Mental Model:
+
+A toll booth:
+
+* Normal vehicle → normal price.
+* Special vehicle → different price.
+
+The decision determines the path.
+
+---
+
+# Step 5 — Algorithm Design
+
+1. Ask the user for hours.
+2. Ask the user for hourly rate.
+3. Convert both values into numbers.
+4. Check if hours are greater than 40.
+5. If yes:
+
+   * Calculate regular pay.
+   * Calculate overtime hours.
+   * Calculate overtime pay.
+   * Add both payments.
+6. Otherwise:
+
+   * Calculate normal pay.
+7. Display total pay.
+
+---
+
+# Step 6 — Programming Concepts
+
+Already known:
+
+✅ Variables
+✅ Input
+✅ Output
+✅ Strings
+✅ Float conversion
+✅ Arithmetic operators
+✅ Assignment
+
+New / strengthened:
+
+## Conditional Statements
+
+Purpose:
+
+Allow programs to make decisions.
+
+Python:
+
+```python
+if condition:
+    action
+else:
+    action
+```
+
+---
+
+# Step 7 — Python Toolbox
+
+| Pattern     | Concept      | Python    |
+| ----------- | ------------ | --------- |
+| Input       | Receive data | `input()` |
+| Transform   | Convert type | `float()` |
+| Selection   | Decision     | `if/else` |
+| Calculation | Arithmetic   | `+ - *`   |
+| Output      | Display      | `print()` |
+
+---
+
+# Step 8 — Python
+
+Your solution is correct. A slightly cleaner version:
+
+```python
+# Input + Transform
+hrs = float(input("Enter Hours: "))
+rph = float(input("Enter rate per hour: "))
+
+# Selection
+if hrs > 40:
+    # Regular pay
+    regular_pay = 40 * rph
+
+    # Overtime calculation
+    overtime_hours = hrs - 40
+    overtime_pay = overtime_hours * rph * 1.5
+
+    total_pay = regular_pay + overtime_pay
+
+else:
+    total_pay = hrs * rph
+
+# Output
+print(total_pay)
+```
+
+---
+
+# Step 9 — Generalization
+
+## Problem Type
+
+Conditional Calculation
+
+## Recognition Clues
+
+"When a problem has different rules depending on a condition."
+
+Examples:
+
+* Overtime pay
+* Discounts
+* Tax brackets
+* Shipping costs
+* Grades
+
+---
+
+## General Algorithm
+
+```text
+Receive Input
+      ↓
+Transform Data
+      ↓
+Check Condition
+      ↓
+Choose Calculation
+      ↓
+Output Result
+```
+
+---
+
+# Step 10 — Pattern Library Entry
+
+Save this.
+
+Location:
+
+```text
+Patterns/
+└── selection.md
+```
+
+```markdown
+# Selection
+
+## Purpose
+
+Choose between different actions based on a condition.
+
+## Recognition Clues
+
+- If...
+- Otherwise...
+- Depending on...
+- When this happens...
+
+## Mental Model
+
+A traffic light choosing a direction.
+
+## Algorithm
+
+Check condition
+
+If true:
+    perform action A
+
+Else:
+    perform action B
+
+## Programming Concepts
+
+- Boolean expressions
+- Conditions
+- Branching
+
+## Python Toolbox
+
+if
+elif
+else
+
+## Sample Code
+
+age = int(input("Age: "))
+
+if age >= 18:
+    print("Allowed")
+else:
+    print("Not allowed")
+
+## Often Combined With
+
+- Validation
+- Input
+- Iteration
+- Calculation
+```
+
+---
+
+# Step 11 — Pattern Pipeline Library
+
+Save this.
+
+Location:
+
+```text
+Pipelines/
+└── conditional-calculation.md
+```
+
+```markdown
+# Conditional Calculation Pipeline
+
+## Purpose
+
+Perform different calculations depending on a condition.
+
+## Flow
+
+Input
+ ↓
+Transform
+ ↓
+Selection
+ ↓
+Calculation
+ ↓
+Output
+
+
+## Recognition Clues
+
+- "If the value is..."
+- "For values above..."
+- "Otherwise..."
+- "Different rules apply..."
+
+
+## Reusable Algorithm
+
+Receive data
+
+Convert data type
+
+Check condition
+
+Choose calculation path
+
+Display result
+
+
+## Sample Code
+
+hours = float(input("Hours: "))
+rate = float(input("Rate: "))
+
+if hours > 40:
+    pay = (40 * rate) + ((hours - 40) * rate * 1.5)
+else:
+    pay = hours * rate
+
+print(pay)
+```
+
+---
+
+# Step 12 — Knowledge Update
+
+## Already knew
+
+✅ Variables
+✅ Input
+✅ Output
+✅ Float conversion
+✅ Arithmetic
+
+## New
+
+⭐ Selection pattern
+⭐ Conditional Calculation pipeline
+
+## Strengthened
+
+* Transform
+* Input → Transform → Process → Output
+
+---
+
+## Library Update
+
+Add:
+
+```
+Patterns
+└── Selection
+
+Pipelines
+└── Conditional Calculation
+```
+
+Do **not** save this entire exercise.
+
+The reusable knowledge is:
+
+1. **Selection** = choose a path.
+2. **Conditional Calculation Pipeline** = when rules change depending on conditions.
+

@@ -1,0 +1,56 @@
+Pipeline Name:
+
+Calculation Function Pipeline
+
+
+Purpose:
+
+Receive data, process it, return a calculated result.
+
+
+Flow:
+
+
+Input
+
+↓
+
+Assignment
+
+↓
+
+Function Call
+
+↓
+
+Function Processing
+
+↓
+
+Selection
+
+↓
+
+Calculation
+
+↓
+
+Return Value
+
+↓
+
+Output
+
+
+Recognition Clues:
+
+"When the program needs a reusable calculation."
+
+
+Reusable Algorithm:
+
+1. Collect inputs.
+2. Pass inputs into function.
+3. Function processes data.
+4. Function returns result.
+5. Display result.

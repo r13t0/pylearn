@@ -1,5 +1,8 @@
 IT
 
+# search for files in NVIM
+:Telescope find_files
+
 Neovim = write/edit code
 Terminal = save/version/sync code (Git)
 
