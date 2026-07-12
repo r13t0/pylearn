@@ -1,0 +1,184 @@
+Exactly. If your conditions and loops have the same structure, your brain only learns one problem-solving process.
+
+
+---
+
+🔁 LOOPS (REUSABLE THINKING MODEL)
+
+1️⃣ IDENTIFY THE REPETITION
+
+Ask:
+
+> What action repeats?
+
+
+
+That becomes the loop body.
+
+
+---
+
+2️⃣ IDENTIFY THE REPETITION RULE
+
+Ask:
+
+> What controls repetition?
+
+
+
+Known count / collection → for
+
+Unknown condition → while
+
+
+
+---
+
+3️⃣ IDENTIFY WHAT CHANGES
+
+Ask:
+
+> What moves the loop toward the end?
+
+
+
+Examples:
+
+next item
+
+counter increases
+
+total changes
+
+condition becomes False
+
+
+
+---
+
+4️⃣ CHOOSE THE LOOP
+
+Known repetitions  → for
+Unknown repetitions → while
+
+
+---
+
+5️⃣ CHOOSE THE BEHAVIOR
+
+What is happening inside the loop?
+
+🔹 Iteration
+
+Visit/process each item.
+
+🔹 Counting
+
+Track occurrences.
+
+count += 1
+
+🔹 Accumulation
+
+Combine values.
+
+total += value
+
+
+---
+
+6️⃣ EXECUTION
+
+Python repeats the loop body until the repetition rule says stop.
+
+
+---
+
+🧠 CORE INSIGHT
+
+A loop is built from:
+
+> repetition + control + change
+
+
+
+
+---
+
+⚡ REUSABLE CHECKLIST
+
+When solving any loop problem:
+
+1. What repeats?
+
+
+2. What controls repetition?
+
+
+3. What changes each repetition?
+
+
+4. for or while?
+
+
+5. Iteration, counting, or accumulation?
+
+
+
+
+---
+
+⚡ ONE-LINE MEMORY
+
+> Loop = repeat → control → change
+
+
+
+
+---
+
+Notice how it now matches your condition model:
+
+✅ Conditions
+
+1. Identify decision
+
+
+2. Build condition
+
+
+3. Assign meaning
+
+
+4. Choose pattern
+
+
+5. Execute
+
+
+
+✅ Loops
+
+1. Identify repetition
+
+
+2. Build repetition rule
+
+
+3. Identify change
+
+
+4. Choose loop
+
+
+5. Execute
+
+
+
+Both are now the same mental algorithm:
+
+> Identify → Build → Choose → Execute
+
+
+
+That's a reusable thinking pattern you can apply to many programming concepts, not just conditions and loops.

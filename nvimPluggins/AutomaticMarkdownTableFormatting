@@ -1,0 +1,50 @@
+Automatic Markdown Table Formatting (Neovim + Lazy.nvim)
+
+
+GOAL: Automatically align Markdown tables whenever I save a .md file.
+
+1. Install the plugin (one time)
+Create a plugin file:
+nvim ~/.config/nvim/lua/plugins/markdown.lua
+
+Add:
+
+return {
+  {
+    "dhruvasagar/vim-table-mode",
+    ft = { "markdown" },
+    config = function()
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.md",
+        callback = function()
+          vim.cmd("silent! TableModeRealign")
+        end,
+      })
+    end,
+  },
+}
+
+If it's a new plugin:
+:Lazy sync
+
+Restart Neovim.
+
+2. Everyday Usage
+
+Open a Markdown file.
+Paste or edit a table.
+Save the file:
+:w
+The table is automatically aligned.
+
+3. Manual Commands
+
+Enable Table Mode:
+:TableModeEnable  → runs TableModeRealign automatically before saving. 
+
+Realign the current table:
+:TableModeRealign
+
+Disable Table Mode:
+:TableModeDisable
+
