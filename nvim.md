@@ -99,6 +99,8 @@ Then paste the output here. That will tell us whether you should commit, stash, 
 ANDROID
 🔴 When you change code:
 
+git pull --rebase
+# then edit
 git add .
 git commit -m "update"
 git push 
