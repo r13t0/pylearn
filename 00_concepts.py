@@ -26,19 +26,7 @@ You already cloned the repo
 AND later you made changes somewhere else (Android)
 write code on android/desktop → commit → push
 run: git pull → get updated code
-
-ANDROID
-🔴 When you change code:
-
-git add .
-git commit -m "update"
-git push 
-
-
-
-What this means: 👉 “upload to cloud”
-✔ Save changes locally (commit)
-✔ Upload to GitHub (push)
+ub (push)
 ✔ Now other devices can see it
 
 
