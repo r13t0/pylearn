@@ -27,6 +27,64 @@ AND later you made changes somewhere else (Android)
 write code on android/desktop → commit → push
 run: git pull → get updated code
 
+Your local changes to the following files would be overwritten by merge.
+Please commit your changes or stash them before you merge.
+
+That message means Git is protecting your work.
+
+It usually looks something like:
+
+Your local changes to the following files would be overwritten by merge.
+Please commit your changes or stash them before you merge.
+
+Git is saying:
+
+> "You have uncommitted changes on your laptop. If I pull now, those changes might be lost."
+
+
+
+You have three choices:
+
+1. Keep your changes (recommended if you want them)
+
+Commit them:
+
+git status
+git add .
+git commit -m "Describe your changes"
+git pull
+
+2. Keep your changes, but don't commit yet
+
+Stash them temporarily:
+
+git stash
+git pull
+git stash pop
+
+This hides your changes, pulls the latest code, then reapplies your changes.
+
+3. You don't need your local changes
+
+Discard them:
+
+git restore .
+git pull
+
+⚠️ This permanently deletes any uncommitted changes.
+
+
+---
+
+First, find out what changed
+
+Before deciding, run:
+
+git status
+
+Then paste the output here. That will tell us whether you should commit, stash, or discard the changes.
+
+
 ANDROID
 🔴 When you change code:
 
