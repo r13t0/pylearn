@@ -1,8 +1,15 @@
 IT
 
+<<<<<<< HEAD
 # search for files in NVIM
 :Telescope find_files
 
+=======
+find the exact path of the directory you are currently in, use the pwd
+
+
+:
+>>>>>>> 4ad53a8 (Update)
 Neovim = write/edit code
 Terminal = save/version/sync code (Git)
 
@@ -144,14 +151,31 @@ mv 00_concepts.py ~/pylearn/
 
 If you want to move it from anywhere using the full path:
 
+find the exact path of the directory you are currently in, use the pwd
+
+cp path 
+Type the command: mv /path/to/source_folder /path/to/destination_folder
+
+
 Example:
 
-mv ~/00_concepts.py ~/pylearn/
 
-
-mv file                 :mv script.py path/to/folder/
+mv file                 :mv script.py ~/path/to/folder/
 
 access init.lua - Terminal  ls -a ~/.config/nvim/
+≠===========================
+
+                        TELESCOPE
+
+Use these keys to scroll through your file list and its preview in the Telescope fuzzy finder
+
+:List of files: Press Ctrl + d to scroll down or Ctrl + u to scroll up.
+
+File preview window: Press Ctrl + f to scroll down or Ctrl + b to scroll up. 
+
+Left/Right: Press Ctrl + k to scroll the file paths to the left and Ctrl + l to scroll to the right
+
+
 
 
 execute file            :!python3 %
