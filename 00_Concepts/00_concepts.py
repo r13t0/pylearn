@@ -26,6 +26,7 @@ You already cloned the repo
 AND later you made changes somewhere else (Android)
 write code on android/desktop → commit → push
 run: git pull → get updated code
+<<<<<<< HEAD
 
 Your local changes to the following files would be overwritten by merge.
 Please commit your changes or stash them before you merge.
@@ -97,6 +98,9 @@ git push
 What this means: 👉 “upload to cloud”
 ✔ Save changes locally (commit)
 ✔ Upload to GitHub (push)
+=======
+ub (push)
+>>>>>>> 89fc7527c33223b47e2a1ea10fa32941c16be5e3
 ✔ Now other devices can see it
 
 
