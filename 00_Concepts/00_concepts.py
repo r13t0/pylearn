@@ -103,6 +103,8 @@ ub (push)
 >>>>>>> 89fc7527c33223b47e2a1ea10fa32941c16be5e3
 ✔ Now other devices can see it
 
+One important habit: don't edit the same file on both devices at the same time. Git is good at merging, but it is much easier if one device does the editing and the other receives the update. Your Python learning repo and Neovim config will stay much cleaner this way.
+
 
 
 -------------------------------------------------------------------
