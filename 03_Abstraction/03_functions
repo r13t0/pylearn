@@ -1,0 +1,139 @@
+Perfect. Functions fit the same pattern.
+
+
+---
+
+🧩 FUNCTIONS (REUSABLE THINKING MODEL)
+
+1️⃣ IDENTIFY THE TASK
+
+Ask:
+
+> What job repeats or can be reused?
+
+
+
+That becomes a function.
+
+
+---
+
+2️⃣ IDENTIFY THE INPUT
+
+Ask:
+
+> What information does the function need?
+
+
+
+These become the parameters.
+
+
+---
+
+3️⃣ IDENTIFY THE PROCESS
+
+Ask:
+
+> What should the function do with the input?
+
+
+
+This becomes the function body.
+
+
+---
+
+4️⃣ IDENTIFY THE OUTPUT
+
+Ask:
+
+> Should it produce a result?
+
+
+
+Yes → return
+
+No → perform an action (e.g. print)
+
+
+
+---
+
+5️⃣ USE THE FUNCTION
+
+Call the function when you need that task.
+
+
+---
+
+🧠 CORE INSIGHT
+
+A function is built from:
+
+> task + input + process + output
+
+
+
+
+---
+
+⚡ REUSABLE CHECKLIST
+
+When solving any function problem:
+
+1. What task should be reusable?
+
+
+2. What inputs are needed?
+
+
+3. What processing happens?
+
+
+4. Return a value or perform an action?
+
+
+5. Call the function.
+
+
+
+
+---
+
+⚡ ONE-LINE MEMORY
+
+> Function = task → input → process → output
+
+
+
+
+---
+
+🧠 Your unified programming models
+
+🚦 Conditions
+
+> Decision → Condition → Meaning → Execute
+
+
+
+🔁 Loops
+
+> Repetition → Control → Change → Execute
+
+
+
+🧩 Functions
+
+> Task → Input → Process → Output
+
+
+
+Notice the pattern:
+
+> Identify → Build → Execute
+
+
+
+That's the common thinking process behind these core programming concepts.
