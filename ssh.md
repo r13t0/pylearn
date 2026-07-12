@@ -95,3 +95,84 @@ From now on:
 
 Your Git workflow will be properly connected.
 
+
+=============================================================
+
+
+If the folders are **empty**, then you have found the reason.
+
+Git does **not track empty folders**.
+
+So this:
+
+```text
+pylearn/
+├── Patterns/
+└── Pipelines/
+```
+
+exists on your computer, but Git sees nothing to upload because there are no files inside.
+
+Git only tracks **files**, not folders.
+
+---
+
+## Solution: add placeholder files
+
+Inside your computer:
+
+```bash
+cd ~/pylearn
+```
+
+Create placeholder files:
+
+```bash
+touch Patterns/.gitkeep
+touch Pipelines/.gitkeep
+```
+
+Now Git sees files:
+
+```text
+Patterns/
+└── .gitkeep
+
+Pipelines/
+└── .gitkeep
+```
+
+Then upload:
+
+```bash
+git add .
+git commit -m "Add Patterns and Pipelines folders"
+git push
+```
+
+On Android:
+
+```bash
+git pull
+```
+
+Now the folders will appear.
+
+---
+
+The `.gitkeep` file is just a convention. It tells Git:
+
+> "Keep this folder structure even though it is currently empty."
+
+Later, when you add real files:
+
+```text
+Patterns/
+├── sequence.md
+├── iteration.md
+└── selection.md
+```
+
+you can delete `.gitkeep` if you want.
+
+
